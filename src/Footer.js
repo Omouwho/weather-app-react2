@@ -5,7 +5,11 @@ export default function Footer() {
   return (
     <div className="Footer">
       This project is coded by
-      <a href="https://esthers-portfolio-project.netlify.app/">
+      <a
+        href="https://esthers-portfolio-project.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {" "}
         Esther Omouwho{" "}
       </a>{" "}
