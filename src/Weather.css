@@ -52,3 +52,41 @@
   top: -34px;
   line-height: 1;
 }
+
+@media (max-width: 800px) {
+  .Weather .temperature {
+    color: #212121;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 66px;
+    position: relative;
+    left: -22px;
+  }
+
+  .Weather .unit {
+    color: rgb(33, 33, 33);
+    font-size: 19px;
+    font-weight: 400;
+    position: relative;
+    top: -63px;
+    line-height: 1;
+    right: -29px;
+  }
+
+  .Weather img {
+    height: 64px;
+    width: 99px;
+    margin-right: 10px;
+    display: inline-block;
+    margin-left: -20px;
+  }
+
+  .w-100 {
+    width: 132% !important;
+  }
+
+  .Footer {
+    font-size: 15px;
+    margin: -18px 13px;
+  }
+}
