@@ -65,12 +65,12 @@
 
   .Weather .unit {
     color: rgb(33, 33, 33);
-    font-size: 29px;
+    font-size: 15px;
     font-weight: 400;
     position: relative;
     top: -63px;
     line-height: 1;
-    right: -30px;
+    right: -33px;
   }
 
   .Weather img {
