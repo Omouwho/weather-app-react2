@@ -54,28 +54,34 @@
 }
 
 @media (max-width: 800px) {
+  .Weather h1 {
+    font-size: 27px;
+    font-weight: 100;
+    margin: 20px 0 10px 0;
+    line-height: 29px;
+  }
   .Weather .temperature {
     color: #212121;
     font-size: 54px;
     font-weight: 400;
     line-height: 66px;
     position: relative;
-    left: -25px;
+    left: -26px;
   }
 
   .Weather .unit {
     color: rgb(33, 33, 33);
     display: flex;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     position: relative;
     top: -63px;
     line-height: 1;
-    right: -40px;
+    right: -30px;
   }
 
   .Weather img {
-    height: 64px;
+    height: 78px;
     width: 80px;
     margin-right: 14px;
     display: inline-block;
@@ -91,12 +97,12 @@
     margin: -18px 13px;
   }
 
-  .description2 {
-    padding-left: 30px;
-    font-size: 100px;
-  }
-
   .description1 {
     padding-left: 17px;
+  }
+
+  .description2 {
+    padding-left: 22px;
+    font-size: 100px;
   }
 }
