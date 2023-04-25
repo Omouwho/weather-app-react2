@@ -4,7 +4,7 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <div className="Footer">
-      This project is coded by
+      This project was coded by
       <a
         href="https://esthers-portfolio-project.netlify.app/"
         target="_blank"

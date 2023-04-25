@@ -1,3 +1,8 @@
+/* body {
+  background-image: url("/src/images/backgroung.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
 .App {
   /* text-align: center; */
   margin: 30px auto;
