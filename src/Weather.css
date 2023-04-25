@@ -1,11 +1,12 @@
 .Weather {
   font-family: Arial, Helvetica, sans-serif;
   border: 5px solid #dadde1;
-  color: rgb(135, 135, 135);
   padding: 16px;
-  margin: 30px auto;
+  margin: 0 auto;
   border-radius: 20px;
-  background-color: white;
+  background-image: url("/src/images/backgroung.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .Weather {
@@ -18,7 +19,7 @@
 }
 
 .Weather img {
-  height: 64px;
+  height: 70px;
   width: 64px;
   margin-right: 10px;
   display: inline-block;
@@ -36,6 +37,23 @@
   font-weight: 100;
   line-height: 19px;
   list-style: none;
+}
+
+.WeatherForecast-day {
+  font-size: 18px;
+  margin-bottom: -25px;
+  margin-left: -23px;
+}
+
+.WeatherForecast-temperatures {
+  margin-top: -6px;
+  font-size: 15px;
+  margin-left: -15px;
+}
+
+.WeatherForecast-img {
+  margin-left: -13px;
+  margin-top: 20px;
 }
 
 .Weather .temperature {
@@ -90,12 +108,13 @@
   }
 
   .w-100 {
-    width: 136% !important;
+    width: 144% !important;
+    margin-left: -5px;
   }
 
   .Footer {
     font-size: 15px;
-    margin: -18px 13px;
+    margin: -4px 13px;
   }
 
   .description1 {
@@ -105,5 +124,22 @@
   .description2 {
     padding-left: 22px;
     font-size: 100px;
+  }
+
+  .WeatherForecast-day {
+    font-size: 16px;
+    margin-bottom: -25px;
+    margin-left: -23px;
+  }
+
+  .WeatherForecast-temperatures {
+    margin-top: -6px;
+    font-size: 15px;
+  }
+
+  .WeatherForecast-img {
+    margin-left: -20px;
+    margin-top: 12px;
+    height: 50px;
   }
 }
