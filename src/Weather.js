@@ -7,22 +7,29 @@ import "./Weather.css";
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [error, setError] = useState("");
 
   function handleResponse(response) {
-    // console.log(response.data);
-    setWeatherData({
-      ready: true,
-      coordinates: response.data.coordinates,
-      temperature: response.data.temperature.current,
-      humidity: response.data.temperature.humidity,
-      wind: response.data.wind.speed,
-      city: response.data.city,
-      date: new Date(response.data.time * 1000),
-      iconUrl: response.data.condition.icon_url,
-      // iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
-      // iconUrl: response.data.condition.icon_url,
-      description: response.data.condition.description,
-    });
+    const { coordinates, temperature, wind, city, time, condition, status } =
+      response.data;
+
+    if (status === "not_found") {
+      setError("Enter a valid city...");
+    } else {
+      setWeatherData({
+        ready: true,
+        coordinates,
+        temperature: temperature.current,
+        humidity: temperature?.humidity,
+        wind: wind.speed,
+        city: city,
+        date: new Date(time * 1000),
+        iconUrl: condition.icon_url,
+        description: condition.description,
+      });
+      setCity("");
+      setError("");
+    }
   }
 
   function search() {
@@ -51,6 +58,7 @@ export default function Weather(props) {
                 className="form-control"
                 autoFocus="on"
                 onChange={handleCityChange}
+                value={city}
               />
             </div>
             <div className="col-3">
@@ -62,6 +70,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
+        <p style={{ color: "#f00" }}>&nbsp; {error}</p>
         <WeatherInfo data={weatherData} />
         <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
